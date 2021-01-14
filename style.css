@@ -1,22 +1,55 @@
 /* Write some CSS below */
 body {
   font-family: Courier;
-  font-size: 18px;
+  font-size: 1em;
   margin: 10px;
   background: rgb(230, 230, 230);
-  background-image: url(images/trees.png);
-  color: #05311A;
+  background-image: url(images/starrySky.jpg);
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner{
+  background-size: cover;
+  text-align: center;
+  padding: 0 0 50px;
+  margin: 10px 10px;
+  height: 600px;
+}
+
+.banner h1{
+  font-size: 6em;
+}
+
+.banner h2 {
+  margin-top: 50px;
+  color: whitesmoke;
+  font-size: 1.75em;
 }
 
 h1 {
-  color: #114479;
-  font-family: 'Oswald', sans-serif;
-  font-size: 50px;
+  background: -webkit-linear-gradient(#9198e5, #e66465);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'IM Fell DW Pica', serif;
 }
 
 h2 {
-  color: #2C8FF6;
+  color:  #e66465;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em;
 }
+
+h3 {
+  color: black;
+}
+
+p {
+  color: #9198e5;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75em;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,21 +58,19 @@ a:hover {
   color: yellow;
 }
 
-.banner{
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 100px;
-  margin: 50px 50px;
+.about {
+  background-color: black;
+  font: 2em white;
+  width: 75%;
+  align-content: center;
+  padding: 50px;
+  margin:auto;
 }
 
-.banner h1{
-  font-size: 60px;
+#kayle {
+  width: 100px;
 }
 
-.banner h2 {
-  margin-top: 50px;
-}
 .btn-pink{
   background: #F2B6FB;
   color: #2C8FF6;
@@ -118,14 +149,29 @@ a:hover {
   color: white;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+@media (max-width: 542px) {
+  .banner h1 {
+  font-size: 4em;
+  }
+  .banner h2 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+  p {
+    font-size: 0.5em;
+  }
+  #kayle {
+    align-content: center;
+  }
+  /*.topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
   .topnav a.icon {
     float: right;
     display: block;
-  }
+  }*/
 }
 
 @media screen and (max-width: 600px) {
