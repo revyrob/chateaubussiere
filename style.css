@@ -2,7 +2,7 @@
 body {
   font-family: Courier;
   font-size: 1em;
-  margin: 10px;
+  margin: 0px;
   background: rgb(230, 230, 230);
   background-image: url(images/starrySky.jpg);
   background-size: cover;
@@ -37,17 +37,18 @@ h1 {
 h2 {
   color:  #e66465;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h3 {
-  color: black;
+  color: whitesmoke;
+  font-size: 2em;
 }
 
 p {
   color: #9198e5;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.75em;
+  font-size: 1.5em;
 }
 
 a {
@@ -58,9 +59,16 @@ a:hover {
   color: yellow;
 }
 
+footer a:hover {
+  color:  #9198e5;
+}
+
+footer a {
+  color: black;
+}
+
 .about {
   background-color: black;
-  font: 2em white;
   width: 75%;
   align-content: center;
   padding: 50px;
@@ -71,6 +79,11 @@ a:hover {
   width: 100px;
 }
 
+.projects {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  
+}
 .btn-pink{
   background: #F2B6FB;
   color: #2C8FF6;
@@ -88,25 +101,22 @@ a:hover {
   text-align: center;
 }
 
-.box-white{
-  background-color: white;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  padding: 18px;
-  border-radius: 4px;
-  margin: 1px;
-  width: 60%;
-  text-align: center;
+.card-white h4 {
+  font-size: 1.75em;
 }
 
 .card-white img{
   width: 180px;
   height: 180px;
   border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
+
 .card-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
 }
 
 .container {
@@ -116,13 +126,15 @@ a:hover {
   border-radius: 4px;
   margin: 1px;
   width: 200px;
-  
 }
 
-.footer{
+footer{
   background-color: gray;
-  padding: 24px, 0;
-  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  border-bottom: 10px solid black;
 }
 
 .topnav {
@@ -157,10 +169,10 @@ a:hover {
     font-size: 1.5em;
   }
   h2 {
-    font-size: 1.25em;
+    font-size: 2em;
   }
   p {
-    font-size: 0.5em;
+    font-size: 1em;
   }
   #kayle {
     align-content: center;
