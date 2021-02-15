@@ -14,7 +14,7 @@ body {
   text-align: center;
   padding: 0 0 50px;
   margin: 10px 10px;
-  height: 600px;
+  height: 700px;
 }
 
 .banner h1{
@@ -36,8 +36,12 @@ h1 {
 
 h2 {
   color:  #e66465;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 3em;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 3.5em;
+}
+
+.projects h2 {
+  color:  black;
 }
 
 h3 {
@@ -81,6 +85,7 @@ footer a {
   align-content: center;
   padding: 50px;
   margin:auto;
+  line-height: 2em;
 }
 
 #kayle {
@@ -88,7 +93,6 @@ footer a {
 }
 
 .projects {
-  background: rgba(255, 255, 255, 0.15);
   padding: 50px;
   
 }
