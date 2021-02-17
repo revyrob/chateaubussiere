@@ -11,80 +11,100 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Josefin+Sans&display=swap"
 		rel="stylesheet">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 	<!-- Nav bar-->
-	<div class="topnav" id="myTopnav">
-		<a href="index.html">Home</a>
-		<a href="#projects">Projects</a>
-		<a href="#about">About</a>
-	</div>
-	<!--Banner Section-->
-	<div class="banner">
-		<h1> Bonjour!
-			<br>I am Kayle Robson
-		</h1>
-		<h3>Continuing to learn and grow as a student in Web Development</h3>
-	</div>
+	<nav id='mainNavbar' class='navbar navbar-light navbar-expand-md py-0'>
+		<a href="index.html" class="navbar-brand">HOME</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navLinks">
+			<ul class='navbar-nav'>
+				<li class="nav-item">
+					<a href="#about" class="nav-link">ABOUT</a>
+				</li>
+			</ul>
+			<ul class='navbar-nav'>
+				<li class="nav-item">
+					<a href="#projects" class="nav-link">PROJECTS</a>
+				</li>
 
-	<div class="contact" id="contact">
-		<div class="card-container">
-			<div class="info">
-				<h3>
-					kayle.robson@gmail.com
-				</h3>
-			</div>
-			<div class="info">
-				<h3>
-					+33 6 16 26 53 35
-				</h3>
-			</div>
-			<div class="info">
-				<h3>
-					Briançon, France
-				</h3>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="intro">
+		<div class="banner">
+			<h1> Bonjour!
+				<br>I am Kayle Robson
+			</h1>
+			<h3>Continuing to learn and grow as a student in Web Development</h3>
+		</div>
+		<div class="contact" id="contact">
+			<div class="card-container">
+				<div class="info">
+					<h3>
+						kayle.robson@gmail.com
+					</h3>
+				</div>
+				<div class="info">
+					<h3>
+						+33 6 16 26 53 35
+					</h3>
+				</div>
+				<div class="info">
+					<h3>
+						Briançon, France
+					</h3>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="about" id="about">
-		<!-- <span><img src="images/kayle.jpg" id="kayle" alt="Kayle Robson"> -->
-		<h2 style="display:inline;">Student Web-developer | Mountain Enthusiast | Involved Citizen.</h2>
-		<!-- </span> -->
+		<div class="about" id="about">
+			<!-- <span><img src="images/kayle.jpg" id="kayle" alt="Kayle Robson"> -->
+			<h2>ABOUT</h2>
+			<!-- </span> -->
+			<h3 style="display:inline;">Student Web-developer | Mountain Enthusiast | Involved Citizen</h3>
+			<p></p>
+			<p>As a critical thinker who enjoys the pleasure of building and creating I have found the perfect match
+				with
+				Web Development.
+				Along with learning french I am learning how to code; I feel both keep my confidence in check! I started
+				self-learning and created my first project:
+				'Bike Serre Chevalier', which is continually evolving.
+				I found my artistic side with 'Briançon Fantômes' by creating a french theatre street show, which I am
+				working on turning into an application with React Native. Both of those
+				projects continue to
+				evolve as I continue to learn. I am currently taking
+				classes online with Udemy and
+				registering for a Computing
+				Science degree in Canada this coming Fall. My previous education was in Water Quality Techonology
+				Engineering Technology where I
+				worked for a couple years as
+				an Environmental Technician. This work was varying and project orienated but working within the oil and
+				gas
+				industry didn't fulfill my need to help the environment. I moved back into the ski insdustry for work
+				and
+				then opened a wine bar and from there learned how to bookkeep.</p>
+			<p>I am a creative person who loves
+				to continue to learn,
+				create new projects and engage with
+				others. You can check out my <a href="https://github.com/revyrob" target="_blank">Github</a> account to
+				see
+				what I have been working
+				on or my <a href="https://www.instagram.com/klee.robby/" target="_blank">Instragram</a> to find out
+				about the things I love.
+				I am seeking an internship in a team-orienated environment where I can learn, grow and share.</p>
+		</div>
+	</section>
 
-
-		<p>As a critical thinker who enjoys the pleasure of building and creating I have found the perfect match with
-			Web Development.
-			Along with learning french I am learning how to code; I feel both keep my confidence in check! I started
-			self-learning and created my first project:
-			'Bike Serre Chevalier', which is continually evolving.
-			I found my artistic side with 'Briançon Fantômes' by creating a french theatre street show, which I am
-			working on turning into an application with React Native. Both of those
-			projects continue to
-			evolve as I continue to learn. I am currently taking
-			classes online with Udemy and
-			registering for a Computing
-			Science degree in Canada this coming Fall. My previous education was in Water Quality Techonology
-			Engineering Technology where I
-			worked for a couple years as
-			an Environmental Technician. This work was varying and project orienated but working within the oil and gas
-			industry didn't fulfill my need to help the environment. I moved back into the ski insdustry for work and
-			then opened a wine bar and from there learned how to bookkeep.</p>
-		<p>I am a creative person who loves
-			to continue to learn,
-			create new projects and engage with
-			others. You can check out my <a href="https://github.com/revyrob" target="_blank">Github</a> account to see
-			what I have been working
-			on or my <a href="https://www.instagram.com/klee.robby/" target="_blank">Instragram</a> to find out
-			about the things I love.
-			I am seeking an internship in a team-orienated environment where I can learn, grow and share.</p>
-	</div>
-
-	<div class="projects" id="projects">
-		<h2>Projects</h2>
+	<section class="projects" id="projects">
+		<h2>PROJECTS</h2>
 
 		<h3>Discover my work</h3>
 
@@ -93,36 +113,55 @@
 				<img src="images/screenshot_bike.png" alt="Bike Serre Chevalier">
 				<h4>Bike Serre Chevalier</h4>
 				<p><a type="button" class="btn-pink" href="
-			https://vtt-serre-che-test.herokuapp.com/">Learn more</p></a>
+			https://vtt-serre-che-test.herokuapp.com/" target="_blank">Learn more</p></a>
 			</div>
 
 			<div class="card-white">
 				<img src="images/screenshot_fantomes.png" alt="Briancon Fantomes">
-				<h4>Les Fantômes de Briançon</h4>
-				<p><a type="button" class="btn-pink" href="https://www.brianconfantomes.com/">Learn more</p></a>
+				<h4>Briançon Fantômes</h4>
+				<p><a type="button" class="btn-pink" href="https://www.brianconfantomes.com/" target="_blank">Learn more
+				</p></a>
 			</div>
 
 			<div class="card-white">
 				<img src="images/Takeout.png" alt="Take-outResto">
 				<h4>Take-out Resto</h4>
-				<p><a type="button" class="btn-pink" href="https://takeout-resto.webflow.io/">Learn more</p></a>
+				<p><a type="button" class="btn-pink" href="https://takeout-resto.webflow.io/" target="_blank">Learn more
+				</p></a>
 			</div>
 
 			<div class="card-white">
 				<img src="images/github.jpg" alt="Take-outResto">
 				<h4>Github</h4>
-				<p><a type="button" class="btn-pink" href="https://github.com/revyrob">Learn more</p></a>
+				<p><a type="button" class="btn-pink" href="https://github.com/revyrob" target="_blank">Learn more
+				</p></a>
 			</div>
 		</div>
-	</div>
+	</section>
 	<footer class="card-container">
 		<a href="#about">About</a>
 		<a href="#projects">Projects</a>
 		<a href="mailto:kayle.robson@gmail.com">Contact</a>
 		<a href="https://www.linkedin.com/in/kayle-robson-1723a595/" target="_blank">LinkedIn</a>
-		<a href="https://www.instagram.com/klee.robby/" target="_blank">Instagram</a>
-		<a href="https://github.com/revyrob" target="_blank">Github</a>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $("#mainNavbar");
+				$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+			});
+		});
+	</script>
 </body>
 
 </html>
