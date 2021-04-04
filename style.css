@@ -77,7 +77,13 @@ p {
 }
  
 a {
+  font-size: 1.25em;
   text-decoration: none;
+}
+
+span {
+  font-size: 1.25em;
+  color: black;
 }
 
 a:hover {
@@ -104,7 +110,9 @@ footer a {
 }
 
 #kayle {
-  width: 100px;
+  width: 150px;
+  border-radius: 50%;
+  
 }
 
 .projects {
