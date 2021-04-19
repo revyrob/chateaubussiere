@@ -184,13 +184,13 @@ footer{
     font-size: 1em;
   }
   #kayle {
-    align-content: center;
+    align-content: left;
   }
   #about {
     width: 90%;
     padding: 15px;
   }
-
+}
 @media screen and (max-width: 600px) {
   #contact .card-container{
     display: flex;
@@ -198,8 +198,13 @@ footer{
     padding: 0 25px;
     font-size: 0.75em;
   }
-  
+  h3 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  } 
 }
-}
+
 
 
