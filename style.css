@@ -86,9 +86,16 @@ span {
   color: black;
 }
 
-a:hover {
+button:hover {
   color: yellow;
   text-decoration: none;
+  transition: 0.75s;
+}
+
+a:hover{
+  color: yellow;
+  text-decoration: none;
+  transition: 0.75s;
 }
 
 footer a:hover {
@@ -120,10 +127,16 @@ footer a {
   
 }
 .btn-pink{
+  height: 69px;
   background: #F2B6FB;
   color: #2C8FF6;
   padding: 12px 16px;
+  margin: 0;
   border-radius: 4px;
+  border: none;
+  font-size: 1.45em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
 }
 
 .card-container {
@@ -142,8 +155,8 @@ footer a {
 }
 
 .card-white img{
-  width: 180px;
-  height: 140px;
+  width: 250px;
+  height: 210px;
   object-fit: contain;
   padding-bottom: 10px;
 }
