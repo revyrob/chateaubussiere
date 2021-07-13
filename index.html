@@ -20,7 +20,7 @@
 
 <body>
 	<!-- Nav bar-->
-	<nav id='mainNavbar' class='navbar navbar-light navbar-expand-md py-0'>
+	<nav id='mainNavbar' class='navbar sticky-top navbar-light navbar-expand-md py-0'>
 		<a href="index.html" class="navbar-brand">HOME</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -35,8 +35,12 @@
 				<li class="nav-item">
 					<a href="#projects" class="nav-link">PROJECTS</a>
 				</li>
-
 			</ul>
+			<!-- <ul class='navbar-nav'>
+				<li class="nav-item">
+					<a href="#hackathon" class="nav-link">HACKATHONS</a>
+				</li>
+			</ul> -->
 		</div>
 	</nav>
 
@@ -83,19 +87,22 @@
 				Along with learning French I am learning how to code; I feel both keep my confidence in check! I
 				started
 				self-learning and created my first project:
-				<a href="https://revyrob.github.io/bikeSerreChe/" target="_blank">Bike Serre Chevalier</a>, which is
-				a bike web application to share trails, guides and important information regarding the bike community of
-				Serre Chevalier.
+				<a href="https://vtt-serre-che-test.herokuapp.com/" target="_blank">Bike Serre Chevalier</a>, which is
+				a bike web application which I build in node.js using Heroku and a Heroku template for node.js.
+				I then wanted to created something from scratch so I built the website again using HTML, Bootstrap,
+				QGIS, and Javascript. I renamed it to <a href="http://revyrob.github.io/bikeSerreChe/"
+					target="_blank">Bike
+					Briançon</a> and I am currently working on branding it and getting a
+				domain.
+			</p>
 
-			<p>I found my artistic side with <a href="https://revyrob.github.io/brianconfantomes/"
-					target="_blank">Briançon
-					Fantômes</a> by creating a french theatre street show in the summer of 2020. I am now working
-				on
-				turning it into an audio theatre experience.</p>
-			<p>I am currently taking
-				classes online with Udemy (Automating the Boring Stuff with Python, Web Development Bootcamp 2021, The
-				Complete React Native +Hooks Course) and
-				registering for a Computing
+			<p>I found my artistic side with <a href="https://www.brianconfantomes.com" target="_blank">Briançon
+					Fantômes</a> by creating a french theatre street show in the summer of 2020. I have now turned it
+				into an audio theatre experience since it would be easier to manage and more COVID friendly.</p>
+			<p>I took an online class with Udemy, Automating the Boring Stuff with Python. My current classes on Udemy
+				are:
+				Web Development Bootcamp 2021 and The
+				Complete React Native +Hooks Course. I am enrolled in a Computing
 				Science degree in Canada this coming fall. My previous education was in Water Quality Techonology
 				Engineering where I
 				worked as
@@ -121,8 +128,16 @@
 
 		<div class="card-container">
 			<div class="card-white">
-				<img src="images/screenshot_bike.png" alt="Bike Serre Chevalier">
+				<img src="images/screenshot_bike_node.png" alt="Bike Serre Chevalier">
 				<h4>Bike Serre Chevalier</h4>
+				<button class="btn-pink" onclick="location.href='https://vtt-serre-che-test.herokuapp.com/'"
+					type="button">
+					Learn more</button>
+			</div>
+
+			<div class="card-white">
+				<img src="images/screenshot_bike.png" alt="Bike Briançon">
+				<h4>Bike Briançon</h4>
 				<button class="btn-pink" onclick="location.href='http://revyrob.github.io/bikeSerreChe/'" type="button">
 					Learn more</button>
 			</div>
@@ -130,8 +145,7 @@
 			<div class="card-white">
 				<img src="images/screenshot_fantomes.png" alt="Briancon Fantomes">
 				<h4>Briançon Fantômes</h4>
-				<button class="btn-pink" onclick="location.href='http://revyrob.github.io/brianconfantomes/'"
-					type="button">
+				<button class="btn-pink" onclick="location.href='http://www.brianconfantomes.com'" type="button">
 					Learn more</button>
 			</div>
 
@@ -143,6 +157,26 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- <section class="hackathon" id="hackathon">
+		<h2>HACKATHONS</h2>
+		<div class="card-container">
+			<div class="card-black">
+				<img src="images/Certificate 4-1-5.pdf" alt="certification Eco Hackathon">
+				<h4>Eco Hackathon</h4>
+				<button class="btn-pink" onclick="location.href='https://eureka-hackon.herokuapp.com/'" type="button">
+					Operation MotherEarth</button>
+				<p>Built within 3 days using React Native</p>
+			</div>
+			<div class="card-black">
+				<img src="images/hackon2.jpg" alt="certification hackon 2.0">
+				<h4>Hackon 2.0</h4>
+				<button class="btn-pink" onclick="location.href='https://eureka-hackon.herokuapp.com/'" type="button">
+					Eureka Mental Health Web App</button>
+				<p>Built within 54hrs using Node.js</p>
+			</div>
+		</div>
+	</section> -->
 	<footer class="card-container">
 		<a href="#about">About</a>
 		<a href="#projects">Projects</a>

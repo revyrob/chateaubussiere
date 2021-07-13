@@ -16,6 +16,7 @@ body {
   font-size: 1.5rem;
   font-weight:100;
   padding: 25px;
+  background-color: rgb(230, 230, 230);
 }
 
 #mainNavbar .nav-link:hover {
@@ -154,6 +155,15 @@ footer a {
   text-align: center;
 }
 
+.card-black {
+  box-shadow: 1px 1px 10px rgba(114, 113, 113, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  width: 300px;
+  text-align: center;
+  background-color: rgba(230, 230, 230, 0.5);
+}
 .card-white img{
   width: 250px;
   height: 210px;
@@ -217,6 +227,15 @@ footer{
   h2 {
     font-size: 2.5em;
   } 
+}
+
+.hackathon {
+  background-color: black;
+  padding: 50px;
+  align-content: center;
+  margin:auto;
+  line-height: 2em;
+  color: rgb(230, 230, 230);
 }
 
 
