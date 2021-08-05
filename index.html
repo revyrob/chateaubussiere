@@ -1,207 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kayle Robson</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-	<meta name="description" content="student web developer">
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Josefin+Sans&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-
+    <meta name="description" content="tour chateau bussiere" />
+    <meta name="keywords" content="chateau, tour, histoire, Auvergne" />
+    <title>ACCUEIL | Chateau Bussiere</title>
 </head>
 
 <body>
-	<!-- Nav bar-->
-	<nav id='mainNavbar' class='navbar sticky-top navbar-light navbar-expand-md py-0'>
-		<a href="index.html" class="navbar-brand">HOME</a>
-		<button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navLinks">
-			<ul class='navbar-nav'>
-				<li class="nav-item">
-					<a href="#about" class="nav-link">ABOUT</a>
-				</li>
-			</ul>
-			<ul class='navbar-nav'>
-				<li class="nav-item">
-					<a href="#projects" class="nav-link">PROJECTS</a>
-				</li>
-			</ul>
-			<!-- <ul class='navbar-nav'>
-				<li class="nav-item">
-					<a href="#hackathon" class="nav-link">HACKATHONS</a>
-				</li>
-			</ul> -->
-		</div>
-	</nav>
+    <nav id="mainNavbar" class="navbar sticky-top navbar-dark navbar-expand-lg py-0">
+        <a href="index.html" class="navbar-brand">
+            <a href="index.html" class="nav-link" id="logo">Chateau de Bussiere</a>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav">
+                    <a href="mailhandler.php" class="nav-link">RESERVE</a>
+                </li>
+                <a href="gallery.html" class="nav-link">GALERIE</a>
+                </li>
+                <li class="nav-flag">
+                    <a href="index.html" class="nav-link"><img src="images/frenchFlag.jpg" class="flag"
+                            alt="french flag"></a>
+                </li>
+                <li class="nav-flag">
+                    <a href="home.html" class="nav-link"><img src="images/englishFlag.jpg" class="flag"
+                            alt="english flag"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-	<section id="intro">
-		<div class="banner">
-			<h1> Bonjour!
-				<br>I am Kayle Robson
-			</h1>
-			<h3>Continuing to learn and grow as a student in Web Development</h3>
-		</div>
-		<div class="contact" id="contact">
-			<div class="card-container">
-				<div class="info">
-					<h3>
-						kayle.robson@gmail.com
-					</h3>
-				</div>
-				<div class="info">
-					<h3>
-						+33 6 16 26 53 35
-					</h3>
-				</div>
-				<div class="info">
-					<h3>
-						Briançon, France
-					</h3>
-				</div>
-			</div>
-		</div>
-		<div class="about" id="about">
-			<div class='row justify-content-left'>
-				<div class='col-s-6 col-lg-8'>
-					<h2>ABOUT</h2>
-					<h3>Web Development Student | Mountain Enthusiast | Involved Citizen</h3>
-				</div>
-				<div class='col-s-6 col-4'>
-					<span><img src="images/kayle.jpg" id="kayle" alt="Kayle Robson"></span>
-				</div>
-			</div>
-			<br>
-			<p>As a critical thinker, I enjoy the pleasure of building and creating. I have found the perfect match
-				with
-				Web Development.
-				Along with learning French I am learning how to code; I feel both keep my confidence in check! I
-				started
-				self-learning and created my first project:
-				<a href="https://vtt-serre-che-test.herokuapp.com/" target="_blank">Bike Serre Chevalier</a>, which is
-				a bike web application which I build in node.js using Heroku and a Heroku template for node.js.
-				I then wanted to created something from scratch so I built the website again using HTML, Bootstrap,
-				QGIS, and Javascript. I renamed it to <a href="http://revyrob.github.io/bikeSerreChe/"
-					target="_blank">Bike
-					Briançon</a> and I am currently working on branding it and getting a
-				domain.
-			</p>
 
-			<p>I found my artistic side with <a href="https://www.brianconfantomes.com" target="_blank">Briançon
-					Fantômes</a> by creating a french theatre street show in the summer of 2020. I have now turned it
-				into an audio theatre experience since it would be easier to manage and more COVID friendly.</p>
-			<p>I took an online class with Udemy, Automating the Boring Stuff with Python. My current classes on Udemy
-				are:
-				Web Development Bootcamp 2021 and The
-				Complete React Native +Hooks Course. I am enrolled in a Computing
-				Science degree in Canada this coming fall. My previous education was in Water Quality Techonology
-				Engineering where I
-				worked as
-				an Environmental Technician.
-			</p>
-			<p>I am a creative person who loves
-				to continue to learn,
-				create new projects and engage with
-				others. You can check out my <a href="https://github.com/revyrob" target="_blank">Github</a> account
-				to
-				see
-				what I have been working
-				on or my <a href="https://www.instagram.com/klee.robby/" target="_blank">Instragram</a> to find out
-				about the things I love.
-				I am seeking an internship in a team-orienated environment where I can learn, grow and share.</p>
-		</div>
-	</section>
+    <div class="banner">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <h1>Chateau de Bussiere</h1>
+                <a type="button" class="btn btn-success btn-lg" id="reserve" href="reserve.html">
+                    RESERVEZ
+                </a>
+            </div>
+        </div>
+    </div>
 
-	<section class="projects" id="projects">
-		<h2>PROJECTS</h2>
+    <div class="container">
+        <h2>INFO</h2>
 
-		<h3>Discover my work</h3>
+        <div class="card-container">
 
-		<div class="card-container">
-			<div class="card-white">
-				<img src="images/screenshot_bike_node.png" alt="Bike Serre Chevalier">
-				<h4>Bike Serre Chevalier</h4>
-				<button class="btn-pink" onclick="location.href='https://vtt-serre-che-test.herokuapp.com/'"
-					type="button">
-					Learn more</button>
-			</div>
+            <div class="card-white">
+                <h3>GALERIE DE PHOTOS</h3>
+                <img src="images/bussiereNight.jpg" alt="bussiere night">
+                <br>
+                <br>
+                <button class="btn btn-danger btn-lg" onclick="location.href='gallery.html'" type="button">
+                    VOIR</button>
+            </div>
 
-			<div class="card-white">
-				<img src="images/screenshot_bike.png" alt="Bike Briançon">
-				<h4>Bike Briançon</h4>
-				<button class="btn-pink" onclick="location.href='http://revyrob.github.io/bikeSerreChe/'" type="button">
-					Learn more</button>
-			</div>
+            <div class="card-white">
+                <h3>LIVRE DE CHATEAU DE BUSSIERE</h3>
+                <img src="images/bookCover.jpg" alt="book cover">
+                <br>
+                <br>
+                <a type="button" class="btn btn-success btn-lg" id="book" href="mailhandler.php">
+                    ACHETEZ
+                </a>
+            </div>
 
-			<div class="card-white">
-				<img src="images/screenshot_fantomes.png" alt="Briancon Fantomes">
-				<h4>Briançon Fantômes</h4>
-				<button class="btn-pink" onclick="location.href='http://www.brianconfantomes.com'" type="button">
-					Learn more</button>
-			</div>
+        </div>
+    </div>
 
-			<div class="card-white">
-				<img src="images/github.jpg" alt="Github">
-				<h4>Github</h4>
-				<button class="btn-pink" onclick="location.href='http://github.com/revyrob/'" type="button">
-					Learn more</button>
-			</div>
-		</div>
-	</section>
+    <div class="container" id="histoire">
+        <h2>NOTRE HISTOIRE</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, saepe consectetur rem exercitationem,
+            ab officiis quo soluta tempora qui veritatis officia vero quam illo, commodi distinctio placeat quis
+            corporis quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi qui omnis sit voluptate
+            ratione quia ullam error vero architecto sint? Totam quos suscipit necessitatibus nemo soluta consequuntur
+            minus, incidunt voluptatem. </p>
+    </div>
 
-	<!-- <section class="hackathon" id="hackathon">
-		<h2>HACKATHONS</h2>
-		<div class="card-container">
-			<div class="card-black">
-				<img src="images/Certificate 4-1-5.pdf" alt="certification Eco Hackathon">
-				<h4>Eco Hackathon</h4>
-				<button class="btn-pink" onclick="location.href='https://eureka-hackon.herokuapp.com/'" type="button">
-					Operation MotherEarth</button>
-				<p>Built within 3 days using React Native</p>
-			</div>
-			<div class="card-black">
-				<img src="images/hackon2.jpg" alt="certification hackon 2.0">
-				<h4>Hackon 2.0</h4>
-				<button class="btn-pink" onclick="location.href='https://eureka-hackon.herokuapp.com/'" type="button">
-					Eureka Mental Health Web App</button>
-				<p>Built within 54hrs using Node.js</p>
-			</div>
-		</div>
-	</section> -->
-	<footer class="card-container">
-		<a href="#about">About</a>
-		<a href="#projects">Projects</a>
-		<a href="mailto:kayle.robson@gmail.com">Contact</a>
-		<a href="https://www.linkedin.com/in/kayle-robson-1723a595/" target="_blank">LinkedIn</a>
-		<span>© 2020 Kayle Robson</span>
-	</footer>
+    <footer class="container-fluid px-0">
+        <div class="col-lg-4 text-center px-5">
+            <a href="index.html">Accueil</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="gallery.html">Galerie</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="mailhandler.php">Contact</a>
+        </div>
+        <br>
+        <div id="copy">© 2021 Chateau de Bussiere. All Rights Reserved.</div>
+    </footer>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
-	<script>
-		$(function () {
-			$(document).scroll(function () {
-				var $nav = $("#mainNavbar");
-				$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-			});
-		});
-	</script>
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
 </body>
 
 </html>

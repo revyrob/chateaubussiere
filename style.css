@@ -1,242 +1,123 @@
-/* Write some CSS below */
 body {
-  font-size: 1em;
-  margin: 0px;
-  background: rgb(230, 230, 230);
-  font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
-
-#intro {
-  padding-top: 45px;
-  background-image: url(images/winter-theo-eilertsen.jpg);
-  background-size:cover;
+.nav-item {
+    padding-right: 10px;
+    padding-left: 10px;
 }
-
+.nav-flag {
+    padding-right: 5px;
+}
 #mainNavbar {
-  font-size: 1.5rem;
-  font-weight:100;
-  padding: 25px;
-  background-color: rgb(230, 230, 230);
+    height:fit-content;
+    padding: 0 10px 0 10px;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
 }
-
+#mainNavbar .nav-link {
+    color: white;
+}
 #mainNavbar .nav-link:hover {
-  color: #e66465;
+    color: #d53443;
 }
-
-.banner{
-  background-size: cover;
-  text-align: center;
-  padding: 0 0 50px;
-  margin: 10px 10px;
-  height: 700px;
+.container {
+    padding-top: 75px;
 }
-
-.banner h2 {
-  margin-top: 50px;
-  color: whitesmoke;
-  font-size: 1.75em;
+.banner {
+    background-image: url(images/bussiereDay1.jpg);
+    background-size: cover;
+    padding-top:45px;
+    height: 700px;
 }
-
 h1 {
-  background: -webkit-linear-gradient(#9198e5, #e66465);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'IM Fell DW Pica', serif;
-  font-size: 6em;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: black;
+    text-align: center;
 }
-
 h2 {
-  color:  #e66465;
-  font-family: 'IM Fell DW Pica', serif;
-  font-size: 3.5em;
-  font-stretch:extra-expanded;
+    text-align: center; 
+    font-size: 2.5em;
+    color:black;
 }
-
-.projects h3 {
-  color:  black;
-  font-size: 2em;
+h4 {
+    font-size: 1em;
 }
-
-h3 {
-  color: whitesmoke;
-  font-size: 2em;
-}
-
-p {
-  color: #9198e5;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5em;
-}
-
-.contact h3 {
-  color:whitesmoke;
-}
-
-.contact {
-  background: rgba(56, 57, 58, 0.3);
-  padding: 25px;
-}
- 
 a {
-  font-size: 1.25em;
-  text-decoration: none;
+    color: whitesmoke;
+    text-decoration: none;
 }
-
-span {
-  font-size: 1.25em;
-  color: black;
-}
-
-button:hover {
-  color: yellow;
-  text-decoration: none;
-  transition: 0.75s;
-}
-
-a:hover{
-  color: yellow;
-  text-decoration: none;
-  transition: 0.75s;
-}
-
-footer a:hover {
-  color:  yellow;
-  text-decoration: none;
-}
-
-footer a {
-  color: black;
-}
-
-.about {
-  background-color: black;
-  width: 75%;
-  align-content: center;
-  padding: 50px;
-  margin:auto;
-  line-height: 2em;
-}
-
-#kayle {
-  width: 150px;
-  border-radius: 50%;
-  
-}
-
-.projects {
-  padding: 50px;
-  
-}
-.btn-pink{
-  height: 69px;
-  background: #F2B6FB;
-  color: #2C8FF6;
-  padding: 12px 16px;
-  margin: 0;
-  border-radius: 4px;
-  border: none;
-  font-size: 1.45em;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5em;
-}
-
 .card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-
 .card-white {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 10px;
-  margin: 5px;
-  width: 300px;
-  text-align: center;
-}
-
-.card-black {
-  box-shadow: 1px 1px 10px rgba(114, 113, 113, 0.5);
-  padding: 10px;
-  border-radius: 10px;
-  margin: 5px;
-  width: 300px;
-  text-align: center;
-  background-color: rgba(230, 230, 230, 0.5);
+    box-shadow: 5px 5px 10px #305a74;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid #cdd5e0;
 }
 .card-white img{
-  width: 250px;
-  height: 210px;
-  object-fit: contain;
-  padding-bottom: 10px;
+    height: 180px;
+    object-fit: contain;
 }
-
-.card-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
+.spaceHeader {
+    padding-top: 25px;
 }
-
-.container {
-  background-color: (30, 30, 30);
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  padding: 18px 18px 18px;
-  border-radius: 4px;
-  margin: 1px;
-  width: 200px;
+.flag {
+    height: 30px;
+    width: 50px;
 }
-
-footer{
-  background: -webkit-linear-gradient(#9198e5, #e66465);
-  color: whitesmoke;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly, space-between;
-  border-bottom: 5px solid black;
+#logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    color: whitesmoke;
 }
-
-@media (max-width: 768px) {
-  .banner h1 {
-  font-size: 4em;
-  }
-  .banner h2 {
-    font-size: 1.5em;
-  }
-  p {
-    font-size: 1em;
-  }
-  #kayle {
-    align-content: left;
-  }
-  #about {
-    width: 90%;
-    padding: 15px;
-  }
+.btn {
+    border: 2px solid whitesmoke;
+    background-color: #d53443;
 }
-@media screen and (max-width: 600px) {
-  #contact .card-container{
+.btn:hover {
+    background-color:#cdd5e0;
+    border:4px solid #305a74;
+    color: black;
+    transition: .5s;
+}
+@media (max-width:768px) {
+    .banner {
+        background-position: center;
+    }
+}
+@media (max-width:1440px) {
+    .banner {
+        background-image: url(images/bussiereDay.jpg);
+        height: 600px;
+    }
+}
+footer a:hover {
+    color: #161A1D;
+}
+footer {
+    background-color: #305a74;
     display: flex;
-    flex-wrap: wrap-reverse;
-    padding: 0 25px;
-    font-size: 0.75em;
-  }
-  h3 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 2.5em;
-  } 
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size:larger;
+}
+#copy {
+    color: black;
+    font-size: smaller;
 }
 
-.hackathon {
-  background-color: black;
-  padding: 50px;
-  align-content: center;
-  margin:auto;
-  line-height: 2em;
-  color: rgb(230, 230, 230);
-}
+
 
 
 
