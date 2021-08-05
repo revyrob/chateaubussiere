@@ -16,11 +16,17 @@ body {
     font-family: 'Oswald', sans-serif;
     background-color: black;
 }
+#mainNavbar .nav-link {
+    color: white;
+}
+#mainNavbar .nav-link:hover {
+    color: #d53443;
+}
 .container {
     padding-top: 75px;
 }
 .banner {
-    background-image: url(images/bussiereDay.jpg);
+    background-image: url(images/bussiereDay1.jpg);
     background-size: cover;
     padding-top:45px;
     height: 700px;
@@ -49,16 +55,15 @@ a {
     flex-wrap: wrap;
 }
 .card-white {
-    box-shadow: 5px 5px 10px #E5383B;
+    box-shadow: 5px 5px 10px #305a74;
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
     width: 350px;
     text-align: center;
-    border: 1px solid rgb(56, 56, 56);
+    border: 1px solid #cdd5e0;
 }
 .card-white img{
-    width: 180px;
     height: 180px;
     object-fit: contain;
 }
@@ -76,11 +81,40 @@ a {
 }
 .btn {
     border: 2px solid whitesmoke;
+    background-color: #d53443;
+}
+.btn:hover {
+    background-color:#cdd5e0;
+    border:4px solid #305a74;
+    color: black;
+    transition: .5s;
 }
 @media (max-width:768px) {
     .banner {
         background-position: center;
     }
+}
+@media (max-width:1440px) {
+    .banner {
+        background-image: url(images/bussiereDay.jpg);
+        height: 600px;
+    }
+}
+footer a:hover {
+    color: #161A1D;
+}
+footer {
+    background-color: #305a74;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size:larger;
+}
+#copy {
+    color: black;
+    font-size: smaller;
 }
 
 
