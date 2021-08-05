@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-item {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.nav-flag {
+    padding-right: 5px;
+}
+#mainNavbar {
+    height:fit-content;
+    padding: 0 10px 0 10px;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+}
+.container {
+    padding-top: 75px;
+}
+.banner {
+    background-image: url(images/bussiereDay.jpg);
+    background-size: cover;
+    padding-top:45px;
+    height: 700px;
+}
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: black;
+    text-align: center;
+}
+h2 {
+    text-align: center; 
+    font-size: 2.5em;
+    color:black;
+}
+h4 {
+    font-size: 1em;
+}
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-white {
+    box-shadow: 5px 5px 10px #E5383B;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid rgb(56, 56, 56);
+}
+.card-white img{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+.spaceHeader {
+    padding-top: 25px;
+}
+.flag {
+    height: 30px;
+    width: 50px;
+}
+#logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+}
+.btn {
+    border: 2px solid whitesmoke;
+}
+@media (max-width:768px) {
+    .banner {
+        background-position: center;
+    }
+}
+
+
+
+
+
