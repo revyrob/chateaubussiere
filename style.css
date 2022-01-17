@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: rgb(232, 232, 250);
 }
 .nav-item {
     padding-right: 10px;
@@ -11,10 +12,9 @@ body {
 #mainNavbar {
     height:fit-content;
     padding: 0 10px 0 10px;
-    font-size: 1em;
-    font-weight: 300;
-    font-family: 'Oswald', sans-serif;
-    background-color: black;
+    font-size: 1.15em;
+    font-weight: 300;   
+    background-color: rgb(54, 54, 54);
 }
 #mainNavbar .nav-link {
     color: white;
@@ -23,21 +23,22 @@ body {
     color: #d53443;
 }
 .container {
-    padding-top: 75px;
+    padding-top: 50px;
 }
 .banner {
-    background-image: url(images/bussiereDay1.jpg);
+    background-image: url(images/bussiereDay3.jpg);
     background-size: cover;
     padding-top:45px;
-    height: 700px;
+    height: 600px;
 }
 h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes', 'Times New Roman', Times, serif;
     font-size: 4em;
     color: black;
     text-align: center;
 }
 h2 {
+    font-family: 'Great Vibes', 'Times New Roman', Times, serif;
     text-align: center; 
     font-size: 2.5em;
     color:black;
@@ -63,6 +64,16 @@ a {
     text-align: center;
     border: 1px solid #cdd5e0;
 }
+.card-black {
+    color: #cdd5e0;
+    box-shadow: 5px 5px 10px #305a74;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 450px;
+    text-align: center;
+    background-color: #161A1D;
+}
 .card-white img{
     height: 180px;
     object-fit: contain;
@@ -71,8 +82,8 @@ a {
     padding-top: 25px;
 }
 .flag {
-    height: 30px;
-    width: 50px;
+    height: 15px;
+    width: 30px;
 }
 #logo {
     font-family: 'Great Vibes', cursive;
