@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Reservation form, english" />
+    <meta name="keywords" content="english contact form" />
+    <title>Reservation Form | Chateau Bussiere</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar sticky-top navbar-dark navbar-expand-lg py-0">
+        <a href="index.html" class="navbar-brand">
+            <a href="index.html" class="nav-link" id="logo">Chateau de Bussiere</a>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav">
+                    <a href="contactForm.html" class="nav-link">Reserve</a>
+                </li>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-flag">
+                    <a href="index.html" class="nav-link"><img src="images/frenchFlag.jpg" class="flag"
+                            alt="french flag"></a>
+                </li>
+                <li class="nav-flag">
+                    <a href="home.html" class="nav-link"><img src="images/englishFlag.jpg" class="flag"
+                            alt="english flag"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                    <h3>Contact us</h3>
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Your email address</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                        <div class="fcf-form-group">
+                            <label for="Message" class="fcf-label">Your message</label>
+                            <div class="fcf-input-group">
+                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="fcf-form-group">
+                            <button type="submit" id="fcf-button" class="btn">Send</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-container">
+            <div class="card-black">
+                <h3>Location</h3>
+                <br>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.203893700177!2d2.5125160231824206!3d46.52386700667059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fa737e22c9492f%3A0x3f65a473dbc8b49f!2sBussi%C3%A8re%2C%2003370%20Chazemais%2C%20France!5e0!3m2!1sen!2sca!4v1642389277760!5m2!1sen!2sca"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="card-black-contact">
+                <h3>
+                    Email here <a href="mailhandler.php">&#x2709</a>
+                </h3>
+                <br>
+                <h3>
+                    Tel# 02 48 63 00 84
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid px-0">
+        <div class="col-lg-4 text-center px-5">
+            <a href="home.html">Home</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="contactForm.html">Contact</a>
+        </div>
+        <br>
+        <div id="copy">© 2021 Chateau de Bussiere. All Rights Reserved.</div>
+    </footer>
+
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+</body>
+
+</html>

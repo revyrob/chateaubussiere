@@ -25,6 +25,7 @@ body {
 .container {
     padding-top: 50px;
 }
+
 .banner {
     background-image: url(images/bussiereDay3.jpg);
     background-size: cover;
@@ -68,6 +69,16 @@ a {
     color: #cdd5e0;
     box-shadow: 5px 5px 10px #305a74;
     padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 450px;
+    text-align: center;
+    background-color: #161A1D;
+}
+.card-black-contact {
+    color: #cdd5e0;
+    box-shadow: 5px 5px 10px #305a74;
+    padding-top: 100px;
     border-radius: 10px;
     margin: 10px;
     width: 450px;
@@ -161,6 +172,29 @@ footer {
     max-width: 100%;
   }
 }
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+input[type=email] {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+  
+  input[type=submit] {
+    background-color: #5DADE2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+  }
 
 
 
