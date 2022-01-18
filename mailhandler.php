@@ -1,6 +1,6 @@
 
 <?php
-header ("Location:mailto:chateaudebussiere@orange.fr");
+header ("Location:mailto:kayle.robson@gmail.com");
 exit();
 ?>
 
