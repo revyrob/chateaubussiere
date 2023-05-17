@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="gallery Château Bussière" />
+    <meta name="keywords" content="gallery, galerie, castle, Château" />
+    <title>Gallery | Château de Bussière</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar sticky-top navbar-dark navbar-expand-lg py-0">
+        <a href="home.html" class="navbar-brand">
+            <a href="home.html" class="nav-link" id="logo">Château de Bussière</a>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav">
+                    <a href="reserve.html" class="nav-link">Book</a>
+                </li>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-flag">
+                    <a href="index.html" class="nav-link"><img src="images/frenchFlag.jpg" class="flag"
+                            alt="french flag"></a>
+                </li>
+                <li class="nav-flag">
+                    <a href="home.html" class="nav-link"><img src="images/englishFlag.jpg" class="flag"
+                            alt="english flag"></a>
+                </li>
+                <li class="nav-flag">
+                    <a href="homepage.html" class="nav-link"><img src="images/germanFlag.png" class="flag"
+                            alt="german flag"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="gallery">
+        <div class="row">
+            <div class="column">
+                <img src="images/Bassins octobre 2020 (1).JPG" alt="basins at bussiere">
+                <img src="images/Sleigher Photo-2902.jpg" alt="archway">
+                <img src="images/Sleigher Photo-2907.jpg" alt="door">
+
+            </div>
+            <div class="column">
+                <img src="images/20150626_sleighera_Mariage_Kayle_et_Benoit0407.jpg" alt="chateau bussiere">
+                <img src="images/IMG_2824.JPG" alt="bussiere in sun">
+                <img src="images/Sleigher Photo-2904.jpg" alt="coat of arms">
+                <img src="images/16 09 2012 (1).JPG" alt="topo view bussiere">
+
+            </div>
+            <div class="column">
+                <img src="images/20150627_sleighera_Mariage_Kayle_et_Benoit0710.jpg" alt="out building doors">
+                <img src="images/bussiereDay.jpg" alt="chateau bussiere in the daytime">
+                <img src="images/Sleigher Photo-2906.jpg" alt="iron chairs by fireplace">
+
+
+
+            </div>
+            <div class="column">
+                <img src="images/Sleigher Photo-0981.jpg" alt="above bussiere">
+                <img src="images/Sleigher Photo-2900.jpg" alt="arches in stone">
+                <img src="images/Sleigher Photo-0992.jpg" alt="interior">
+                <img src="images/Sleigher Photo-2903.jpg" alt="archway 2">
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid px-0">
+        <div class="col-lg-4 text-center px-5">
+            <a href="home.html">Home</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="col-lg-4 text-center px-5">
+            <a href="reserve.html">Contact</a>
+        </div>
+        <br>
+        <div id="copy">© 2021 Château de Bussière. All Rights Reserved.</div>
+    </footer>
+
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
