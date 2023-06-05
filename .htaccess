@@ -8,12 +8,12 @@ RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 
-RewriteCond %{HTTP_HOST} ^www\.chateaudebussiere\.fr$
-RewriteRule ^/?$ "http\:\/\/chateaudebussiere\.fr\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.bussiere-les-nonains\.fr$
+RewriteRule ^/?$ "http\:\/\/bussiere-les-nonains\.fr\/" [R=301,L]
 
 #Always use https for secure connection
-#Replace 'www.chateaudebussiere.fr' with your domain name
+#Replace 'www.bussiere-les-nonains.fr' with your domain name
 #(as it appears on your SSL certificate)
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://chateaudebussiere.fr/$1 [R=301,L]
+RewriteRule ^(.*)$ https://bussiere-les-nonains.fr/$1 [R=301,L]
