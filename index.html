@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -320,14 +324,6 @@
                 >Book a Visit</a
               >
             </div>
-            <!-- Trigger button in nav -->
-            <!-- <a
-      href="#"
-      class="btn btn-gold"
-      data-bs-toggle="modal"
-      data-bs-target="#bookModal"
-      >Book</a
-    > -->
           </div>
         </div>
       </div>
@@ -415,7 +411,8 @@
               </li>
               <li>
                 <a
-                  href="https://bussiere-les-nonains.fr/reserve.html"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookModal"
                   target="_blank"
                   data-i18n="footer.nav_links.3.label"
                   >Book Now</a
@@ -471,15 +468,14 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      // Sticky nav
       const nav = document.getElementById("nav");
       window.addEventListener("scroll", () => {
         nav.classList.toggle("scrolled", window.scrollY > 80);
       });
 
-      // Fade-in on scroll
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
@@ -500,10 +496,7 @@
           observer.observe(el);
         });
 
-      // i18n
-
       let currentLang = "fr";
-
       const translations = {
         en: {
           nav: {
@@ -889,7 +882,6 @@
       };
 
       function getVal(obj, path) {
-        // supports dot notation AND array indexes e.g. "history.timeline.0.desc"
         return path.split(".").reduce((acc, key) => acc?.[key], obj);
       }
 
@@ -897,28 +889,27 @@
         currentLang = lang;
         document.documentElement.lang = lang;
 
-        // text content
         document.querySelectorAll("[data-i18n]").forEach((el) => {
           const val = getVal(translations[lang], el.dataset.i18n);
           if (val !== undefined) el.textContent = val;
         });
 
-        // alt attributes on images
         document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
           const val = getVal(translations[lang], el.dataset.i18nAlt);
           if (val !== undefined) el.alt = val;
         });
-        applyLang("fr");
-        // active button highlight
+
         document.querySelectorAll(".lang-btn").forEach((btn) => {
           btn.classList.toggle("active", btn.dataset.lang === lang);
         });
       }
 
+      // ✅ Called OUTSIDE and AFTER the function definition
+      applyLang("fr");
+
       document.querySelectorAll(".lang-btn").forEach((btn) => {
         btn.addEventListener("click", () => applyLang(btn.dataset.lang));
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
