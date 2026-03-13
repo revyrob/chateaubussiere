@@ -1,210 +1,438 @@
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --stone:    #1C1A17;
+  --stone-md: #2A2720;
+  --stone-lt: #3D3A32;
+  --parchment:#F2EDDF;
+  --cream:    #FAF7F0;
+  --gold:     #B8975A;
+  --gold-lt:  #D4B278;
+  --gold-dk:  #8C6E38;
+  --text:     #2A2720;
+  --muted:    #6B6455;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(232, 232, 250);
-}
-.nav-item {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-.nav-flag {
-    padding-right: 5px;
-}
-#mainNavbar {
-    height:fit-content;
-    padding: 0 10px 0 10px;
-    font-size: 1.15em;
-    font-weight: 300;   
-    background-color: rgb(54, 54, 54);
-}
-#mainNavbar .nav-link {
-    color: white;
-}
-#mainNavbar .nav-link:hover {
-    color: #d53443;
-}
-.container {
-    padding-top: 50px;
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-.banner {
-    background-image: url(images/bussiereDay3.jpg);
-    background-size: cover;
-    padding-top:45px;
-    height: 600px;
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
 }
-h1 {
-    font-family: 'Great Vibes', 'Times New Roman', Times, serif;
-    font-size: 4em;
-    color: black;
-    /* text-align: center; */
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.5s, backdrop-filter 0.5s;
 }
-h2 {
-    font-family: 'Great Vibes', 'Times New Roman', Times, serif;
-    text-align: center; 
-    font-size: 2.5em;
-    color:black;
+nav.scrolled {
+  background: rgba(28,26,23,0.93);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(184,151,90,0.15);
 }
-h4 {
-    font-size: 1em;
+.nav-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; letter-spacing: 0.25em;
+  text-transform: uppercase; color: white; text-decoration: none;
+  opacity: 0.9;
 }
-a {
-    color: whitesmoke;
-    text-decoration: none;
+.nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); text-decoration: none;
+  transition: color 0.2s;
 }
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.nav-links a:hover { color: var(--gold-lt); }
+.nav-langs { display: flex; gap: 0.75rem; }
+.lang-btn {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); background: none; border: none;
+  cursor: pointer; padding: 0; transition: color 0.2s; font-family: 'Jost', sans-serif;
 }
-.card-white {
-    box-shadow: 5px 5px 10px #305a74;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 350px;
-    text-align: center;
-    border: 1px solid #cdd5e0;
+.lang-btn:hover, .lang-btn.active { color: var(--gold-lt); }
+.lang-sep { color: rgba(255,255,255,0.2); font-size: 0.6rem; }
+
+/* ── HERO ── */
+.hero {
+  height: 100vh; min-height: 650px;
+  position: relative; display: flex; align-items: flex-end;
+  overflow: hidden;
 }
-.card-black {
-    color: #cdd5e0;
-    box-shadow: 5px 5px 10px #305a74;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 450px;
-    text-align: center;
-    background-color: #161A1D;
+.hero-img {
+  position: absolute; inset: 0;
+  background: url('https://bussiere-les-nonains.fr/images/bussiereNight.jpg') center/cover no-repeat;
+  transform: scale(1.06);
+  animation: slowZoom 20s ease-out forwards;
 }
-.card-black-contact {
-    color: #cdd5e0;
-    box-shadow: 5px 5px 10px #305a74;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 450px;
-    text-align: center;
-    background-color: #161A1D;
+@keyframes slowZoom { from{transform:scale(1.06)} to{transform:scale(1.0)} }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20,18,14,0.92) 0%,
+    rgba(20,18,14,0.5) 40%,
+    rgba(20,18,14,0.2) 70%,
+    rgba(20,18,14,0.1) 100%
+  );
 }
-.card-white img{
-    height: 180px;
-    object-fit: contain;
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 5rem 3rem; width: 100%;
+  animation: fadeUp 1.2s ease both;
 }
-.spaceHeader {
-    padding-top: 25px;
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+.hero-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+  animation: fadeUp 1.2s ease 0.2s both;
 }
-.flag {
-    height: 15px;
-    width: 30px;
-    border: 1px grey solid;
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300; line-height: 0.95;
+  color: white; letter-spacing: -0.01em;
+  animation: fadeUp 1.2s ease 0.3s both;
 }
-#logo {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2em;
-    color: whitesmoke;
+.hero h1 em { font-style: italic; color: var(--gold-lt); }
+.hero-meta {
+  display: flex; align-items: center; gap: 2rem; margin-top: 2rem;
+  animation: fadeUp 1.2s ease 0.5s both;
 }
+.hero-divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.6; }
+.hero-tagline {
+  font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.hero-ctas {
+  display: flex; gap: 1rem; margin-top: 2.5rem;
+  animation: fadeUp 1.2s ease 0.65s both;
+}
+
 .btn {
-    border: 2px solid whitesmoke;
-    background-color: #d53443;
+  display: inline-block; padding: 0.9rem 2.2rem; text-decoration: none;
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: 'Jost', sans-serif; font-weight: 400;
+  transition: all 0.25s; cursor: pointer; border: none;
 }
-.btn:hover {
-    background-color:#cdd5e0;
-    border:4px solid #305a74;
-    color: black;
-    transition: .5s;
+.btn-gold {
+  background: var(--gold); color: var(--stone);
 }
-@media (max-width:768px) {
-    .banner {
-        background-position: center;
-    }
+.btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.btn-outline-white {
+  background: transparent; color: white;
+  border: 1px solid rgba(255,255,255,0.35);
 }
-@media (max-width:1440px) {
-    .banner {
-        background-image: url(images/bussiereDay.jpg);
-        height: 600px;
-    }
+.btn-outline-white:hover { border-color: var(--gold-lt); color: var(--gold-lt); }
+
+/* scroll cue */
+.scroll-cue {
+  position: absolute; bottom: 2.5rem; right: 3rem; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  color: rgba(255,255,255,0.3); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+  animation: fadeUp 1.2s ease 1s both;
 }
-footer a:hover {
-    color: #161A1D;
+.scroll-line { width: 1px; height: 50px; background: rgba(255,255,255,0.15); position: relative; overflow: hidden; }
+.scroll-line::after {
+  content:''; position:absolute; top:-100%; left:0; width:1px; height:100%;
+  background: var(--gold); animation: scrollDrop 2s ease-in-out infinite;
 }
+@keyframes scrollDrop { from{top:-100%} to{top:200%} }
+
+/* ── INFO STRIP ── */
+.info-strip {
+  background: var(--stone);
+  padding: 2.5rem 3rem;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0; border-bottom: 1px solid rgba(184,151,90,0.12);
+}
+.info-block {
+  padding: 0 2.5rem;
+  border-right: 1px solid rgba(184,151,90,0.15);
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.info-block:first-child { padding-left: 0; }
+.info-block:last-child { border-right: none; }
+.info-label {
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.2rem;
+}
+.info-value { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; font-weight: 300; }
+.info-sub { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+
+/* ── HISTORY ── */
+.history { padding: 8rem 3rem; background: var(--cream); }
+.history-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start;
+}
+.history-label-col { position: sticky; top: 8rem; }
+.section-tag {
+  font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); display: flex; align-items: center; gap: 1rem;
+}
+.section-tag::before { content:''; display:block; width:30px; height:1px; background:var(--gold); }
+.history-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 3.8rem); font-weight: 300;
+  line-height: 1.05; color: var(--stone); margin-top: 1.25rem;
+}
+.history-title em { font-style: italic; color: var(--gold-dk); }
+
+.history-text { padding-top: 0.5rem; }
+.history-text p {
+  font-size: 1.05rem; line-height: 1.9; color: var(--muted);
+  font-weight: 300; margin-bottom: 1.5rem;
+}
+.history-text p:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 400; color: var(--stone);
+  line-height: 1.6; border-left: 2px solid var(--gold); padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ── TIMELINE ── */
+.timeline { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+.timeline-item {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 1.5rem; padding: 1.5rem 0;
+  border-top: 1px solid rgba(184,151,90,0.2);
+}
+.timeline-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; color: var(--gold-dk);
+  padding-top: 0.1rem;
+}
+.timeline-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+/* ── VISIT SECTION ── */
+.visit {
+  background: var(--stone);
+  padding: 8rem 3rem;
+  position: relative; overflow: hidden;
+}
+.visit::before {
+  content: 'BUSSIÈRE';
+  position: absolute; right: -2rem; top: 50%; transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18vw; font-weight: 600; color: rgba(255,255,255,0.02);
+  white-space: nowrap; pointer-events: none; user-select: none;
+  letter-spacing: -0.04em;
+}
+.visit-inner { max-width: 1200px; margin: 0 auto; }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem; }
+
+.visit-card {
+  background: var(--stone-md); padding: 2.5rem;
+  border: 1px solid rgba(184,151,90,0.12);
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s;
+}
+.visit-card:hover { border-color: rgba(184,151,90,0.35); }
+.visit-card::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.visit-card:hover::after { opacity: 1; }
+
+.visit-card-label {
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem;
+}
+.visit-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 300; color: white;
+  margin-bottom: 1.25rem;
+}
+.visit-detail {
+  display: flex; gap: 1rem; padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.visit-detail:last-of-type { border-bottom: none; }
+.visit-detail-key { font-size: 0.75rem; color: rgba(255,255,255,0.35); min-width: 90px; font-weight: 300; }
+.visit-detail-val { font-size: 0.85rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.5; }
+
+.visit-cta { margin-top: 2rem; }
+
+/* ── GALLERY TEASER ── */
+.gallery-teaser { padding: 8rem 3rem; background: var(--parchment); }
+.gallery-inner { max-width: 1200px; margin: 0 auto; }
+.gallery-grid {
+  display: grid; grid-template-columns: 2fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 1rem; margin-top: 3rem;
+}
+.gallery-cell {
+  overflow: hidden; position: relative;
+  background: var(--stone-lt);
+}
+.gallery-cell img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s ease; display: block;
+}
+.gallery-cell:hover img { transform: scale(1.05); }
+.gallery-cell.tall { grid-row: 1 / 3; }
+.gallery-overlay {
+  position: absolute; inset: 0; background: rgba(20,18,14,0.35);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s;
+}
+.gallery-cell:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span {
+  font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: white; border: 1px solid rgba(255,255,255,0.5); padding: 0.6rem 1.2rem;
+}
+
+/* ── FOOTER ── */
 footer {
-    background-color: #305a74;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px;
-    margin-top: 30px;
-    font-size:larger;
+  background: #0E0C09; padding: 4rem 3rem 2rem;
+  border-top: 1px solid rgba(184,151,90,0.1);
 }
-#copy {
-    color: black;
-    font-size: smaller;
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 2fr 2fr;
+  gap: 4rem; padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.row {
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white;
+  letter-spacing: 0.05em; margin-bottom: 1rem;
+}
+.footer-desc { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.7; font-weight: 300; max-width: 280px; }
+.footer-col-title {
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a {
+  font-size: 0.82rem; color: rgba(255,255,255,0.45); text-decoration: none;
+  transition: color 0.2s; font-weight: 300;
+}
+.footer-links a:hover { color: var(--gold-lt); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 2rem; font-size: 0.7rem; color: rgba(255,255,255,0.2);
+  letter-spacing: 0.08em;
+}
+.footer-monument {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.footer-monument::before {
+  content: '⬡'; font-size: 0.8rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .history-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .history-label-col { position: static; }
+  .visit-grid { grid-template-columns: 1fr; }
+  .info-strip { grid-template-columns: 1fr; gap: 1.5rem; }
+  .info-block { border-right: none; border-bottom: 1px solid rgba(184,151,90,0.15); padding: 0 0 1.5rem; }
+  .info-block:last-child { border-bottom: none; padding-bottom: 0; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .gallery-cell.tall { grid-row: auto; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero-content { padding: 3rem 1.5rem; }
+  .history, .visit, .gallery-teaser { padding: 5rem 1.5rem; }
+  .info-strip { padding: 2rem 1.5rem; }
+}
+/* ── BOOK MODAL ── */
+#bookModal .modal-content {
+  background: var(--stone);
+  border: 1px solid rgba(184, 151, 90, 0.2);
+  border-radius: 4px;
+  color: white;
+}
+
+#bookModal .modal-header {
+  border-bottom: 1px solid rgba(184, 151, 90, 0.15);
+  padding: 1.5rem 2rem;
+}
+
+#bookModal .modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+#bookModal .btn-close {
+  filter: invert(1);
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+#bookModal .btn-close:hover { opacity: 1; }
+
+#bookModal .modal-body {
+  padding: 2rem;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+#bookModal .modal-body p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+#bookModal .modal-body a {
+  color: var(--gold-lt);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184, 151, 90, 0.3);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+#bookModal .modal-body a:hover {
+  color: white;
+  border-color: white;
+}
+
+#bookModal .modal-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0.5rem 0 0;
+}
+
+#bookModal iframe {
   width: 100%;
+  height: 260px;
+  border: 1px solid rgba(184, 151, 90, 0.15) !important;
+  border-radius: 2px;
+  filter: grayscale(0.3) brightness(0.85);
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
+#bookModal .modal-backdrop {
+  backdrop-filter: blur(4px);
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-input[type=email] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-  
-  input[type=submit] {
-    background-color: #5DADE2;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-
-
-
-
