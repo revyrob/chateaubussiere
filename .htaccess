@@ -1,5 +1,4 @@
 RewriteEngine on
-THIS_SHOULD_BREAK
 # Redirect /home BEFORE any rewrites
 RewriteCond %{REQUEST_URI} ^/home/?$
 RewriteRule ^home/?$ / [R=301,L]
